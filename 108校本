@@ -1,0 +1,8 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv('D:\\空氣污染物濃度測值.csv')
+
+x = df.loc[[2203,2225,2247,2269,2291,2313,2335,2357,2379,2401,2420,2442],['item2', 'value1']]
+x.columns = ['站名','總懸浮微粒']
+x.to_excel('D:\\空氣污染物濃度測值.xlsx')
+x.head(12)
